@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Add K-Drama</title>
+</head>
+<body>
+    <h2>Add New K-Drama</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="K-Drama Name" required>
+        <input type="text" name="poster" placeholder="Poster URL">
+        <input type="number" name="episodes" placeholder="Episodes" required>
+        <input type="text" name="tags" placeholder="Tags (comma-separated)" required>
+        <input type="text" name="main_leads" placeholder="Main Leads" required>
+        <input type="number" name="rating" placeholder="Rating (1-5)" required>
+        <input type="number" name="release_year" placeholder="Release Year" required>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

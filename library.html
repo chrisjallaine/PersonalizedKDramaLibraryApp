@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>K-Drama Library</title>
+</head>
+<body>
+    <h2>My K-Drama Library</h2>
+    <a href="/add">Add New K-Drama</a>
+    <a href="/logout">Logout</a>
+    <div class="library">
+        {% for kdrama in kdramas %}
+            <div class="card">
+                <img src="{{ kdrama.poster }}" alt="{{ kdrama.name }}">
+                <h3>{{ kdrama.name }}</h3>
+                <p>Episodes: {{ kdrama.episodes }}</p>
+                <p>Tags: {{ kdrama.tags }}</p>
+                <p>Main Leads: {{ kdrama.main_leads }}</p>
+                <p>Rating: {{ kdrama.rating }} / 5</p>
+                <p>Year: {{ kdrama.release_year }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
